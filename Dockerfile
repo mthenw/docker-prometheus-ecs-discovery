@@ -11,4 +11,4 @@ WORKDIR /app/
 COPY --from=builder /go/bin/prometheus-ecs-discovery .
 
 RUN mkdir /config
-ENTRYPOINT ["./prometheus-ecs-discovery", "-config.write-to=/config"]
+ENTRYPOINT ["./prometheus-ecs-discovery", "-config.write-to=/ecs_file_sd.yml"]
