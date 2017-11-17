@@ -2,7 +2,6 @@ FROM golang:1.9-alpine as builder
 RUN apk add --update git
 
 RUN go get -u github.com/teralytics/prometheus-ecs-discovery
-RUN ls -la /go/bin
 
 FROM alpine:3.6
 RUN apk add --no-cache ca-certificates
